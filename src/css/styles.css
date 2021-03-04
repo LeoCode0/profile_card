@@ -11,6 +11,8 @@ html {
 body {
   font-size: 1.8rem;
   font-family: "Kumbh Sans", sans-serif;
+  height: 100vh;
+  overflow: clip;
 }
 
 img {
@@ -22,16 +24,18 @@ img {
   display: block;
   margin: 0 auto;
   width: 90%;
-  max-width: 550px;
-  height: 600px;
+  max-width: 420px;
+  height: 410px;
   border-radius: 20px;
   background: #fff;
   position: relative;
+  z-index: 2;
+  border: 1px solid #19a2ae;
 }
 
 .card__header {
   display: block;
-  height: 30%;
+  height: 150px;
   width: 100%;
   background: url(../images/bg-pattern-card.svg) no-repeat;
   background-size: cover;
@@ -70,14 +74,77 @@ img {
 
 .card__footer {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-around;
   position: absolute;
+  bottom: 20px;
+  border-top: 1px solid #969696;
+  padding-top: 20px;
 }
 
+.footer__stat {
+  text-align: center;
+}
+
+.stat__metric {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.stat__name {
+  margin-top: 5px;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+  color: #969696;
+}
+
+.top {
+  background: url(../images/bg-pattern-top.svg);
+  top: -250px;
+  left: -245px;
+}
+
+.bottom {
+  background: url(../images/bg-pattern-bottom.svg);
+  right: -245px;
+  bottom: -250px;
+}
+
+.top,
+.bottom {
+  height: 511px;
+  width: 490px;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1024px) {
+  .top,
+.bottom {
+    height: 60vh;
+    width: 30vw;
+  }
+
+  .top {
+    top: -22%;
+    left: -5%;
+  }
+
+  .bottom {
+    right: -125px;
+    bottom: -120px;
+  }
+}
 main {
   display: flex;
   height: 100vh;
+  max-height: 100vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
+  object-fit: contain;
+  position: relative;
+  overflow: hidden;
+  background-color: #19a2ae;
 }

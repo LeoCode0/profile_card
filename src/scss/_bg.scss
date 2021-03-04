@@ -1,0 +1,36 @@
+.top {
+  background: url(../images/bg-pattern-top.svg);
+  top: -250px;
+  left: -245px;
+}
+.bottom {
+  background: url(../images/bg-pattern-bottom.svg);
+  right: -245px;
+  bottom: -250px;
+}
+
+.top,
+.bottom {
+  height: 511px;
+  width: 490px;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1024px) {
+  .top,
+  .bottom {
+    height: 60vh;
+    width: 30vw;
+  }
+
+  .top {
+    top: -22%;
+    left: -5%;
+  }
+  .bottom {
+    right: -125px;
+    bottom: -120px;
+  }
+}
